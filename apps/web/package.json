@@ -1,5 +1,5 @@
 {
-	"name": "web",
+	"name": "@mclink/web",
 	"version": "0.0.1",
 	"private": true,
 	"type": "module",
@@ -12,21 +12,23 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "eslint .",
+		"clean": "rimraf .svelte-kit build",
 		"test:integration": "playwright test",
 		"test:unit": "vitest"
 	},
 	"dependencies": {
-		"@repo/ui": "workspace:*"
+		"@mclink/ui": "workspace:*"
 	},
 	"devDependencies": {
-		"@repo/eslint-config": "workspace:*",
-		"@repo/typescript-config": "workspace:*",
+		"@mclink/eslint-config": "workspace:*",
+		"@mclink/typescript-config": "workspace:*",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.22.0",
 		"@sveltejs/vite-plugin-svelte": "^5.1.0",
-		"prettier": "^3.6.0",
 		"eslint": "^9.29.0",
+		"prettier": "^3.6.0",
 		"prettier-plugin-svelte": "^3.4.0",
+		"rimraf": "^6.0.1",
 		"svelte": "^5.34.3",
 		"svelte-check": "^4.2.1",
 		"tslib": "^2.8.1",

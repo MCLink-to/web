@@ -1,0 +1,30 @@
+{
+  "name": "@mclink/api",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm run build && node dist/index.js",
+    "build": "tsc --build",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint .",
+    "clean": "rimraf dist tsconfig.tsbuildinfo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@mclink/eslint-config": "workspace:*",
+    "@mclink/typescript-config": "workspace:*",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.4",
+    "eslint": "^9.29.0",
+    "rimraf": "^6.0.1",
+    "typescript": "5.8.2"
+  }
+}
